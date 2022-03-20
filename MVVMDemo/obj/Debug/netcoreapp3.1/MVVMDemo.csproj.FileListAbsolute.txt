@@ -23,3 +23,5 @@ C:\Users\bucel\Desktop\3 курс\C#\SEM6\MVVMDemo\MVVMDemo\obj\Debug\netcoreapp
 C:\Users\bucel\Desktop\3 курс\C#\SEM6\MVVMDemo\MVVMDemo\obj\Debug\netcoreapp3.1\EllipseUserControl.baml
 C:\Users\bucel\Desktop\3 курс\C#\SEM6\MVVMDemo\MVVMDemo\obj\Debug\netcoreapp3.1\GeneralDictionary.baml
 C:\Users\bucel\Desktop\3 курс\C#\SEM6\MVVMDemo\MVVMDemo\obj\Debug\netcoreapp3.1\App.baml
+C:\Users\bucel\Desktop\3 курс\C#\SEM6\MVVMDemo\MVVMDemo\obj\Debug\netcoreapp3.1\AdditionOfNumbers.g.cs
+C:\Users\bucel\Desktop\3 курс\C#\SEM6\MVVMDemo\MVVMDemo\obj\Debug\netcoreapp3.1\AdditionOfNumbers.baml
