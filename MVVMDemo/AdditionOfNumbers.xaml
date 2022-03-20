@@ -20,13 +20,15 @@
                      HorizontalAlignment="Left"
                      Margin = "305,15,0,0" Name="txtBoxRes"
                      VerticalAlignment="Top" Width="100" IsReadOnly="True"/>
-            <Button Content="Add"
-                    Height="25"
-                    Width="100"
-                    HorizontalAlignment="Left"
-                    Margin="410,-275,55,0" Name = "buttonAdd"
-                    VerticalAlignment="Top" Click="sum_Click"
-                    Background="{StaticResource buttonBrush}"/>
+            
+            
         </StackPanel>
+        <Button Content="Add"
+                Height="25"
+                Width="100"
+                HorizontalAlignment="Left"
+                Margin="410,5,55,0" Name = "buttonAdd"
+                VerticalAlignment="Top" Click="sum_Click"
+                Background="{StaticResource buttonBrush}"/>
     </Grid>
 </UserControl>
