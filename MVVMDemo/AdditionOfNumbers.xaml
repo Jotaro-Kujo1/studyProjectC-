@@ -15,24 +15,17 @@
             <TextBox Height = "25"
                      HorizontalAlignment="Left"
                      Margin = "305,10,0,0" Name="txtBoxNumB"
-                     VerticalAlignment="Top" Width="100" MinHeight="200" />
+                     VerticalAlignment="Top" Width="100" />
             <TextBox Height = "25"
                      HorizontalAlignment="Left"
                      Margin = "305,15,0,0" Name="txtBoxRes"
-                     VerticalAlignment="Top" Width="200" IsReadOnly="True"/>
+                     VerticalAlignment="Top" Width="100" IsReadOnly="True"/>
             <Button Content="Add"
                     Height="25"
                     Width="100"
                     HorizontalAlignment="Left"
                     Margin="410,-275,55,0" Name = "buttonAdd"
-                    VerticalAlignment="Top" 
-                    Background="{StaticResource buttonBrush}"/>
-            <Button Content="Remove"
-                    Height="25"
-                    Width="100"
-                    HorizontalAlignment="Left"
-                    Margin="410,-240,55,0" Name = "buttonRemove"
-                    VerticalAlignment="Top" 
+                    VerticalAlignment="Top" Click="sum_Click"
                     Background="{StaticResource buttonBrush}"/>
         </StackPanel>
     </Grid>
