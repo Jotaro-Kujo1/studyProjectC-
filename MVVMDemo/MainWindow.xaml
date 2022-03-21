@@ -9,5 +9,6 @@
     <Grid>
         <local:EllipseUserControl/>
         <local:AdditionOfNumbers/>
+        <local:SimpleConvertor/>
     </Grid>
 </Window>
