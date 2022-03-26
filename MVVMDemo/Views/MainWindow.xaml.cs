@@ -14,7 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 
-namespace MVVMDemo
+namespace MVVMDemo.Views
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

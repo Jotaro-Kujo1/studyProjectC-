@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "nMoWa0oOyxjIt2tXLq8qCmdhMCf3tyxlxCdes7KVr9xY3DLNU2tKmJZ0xdM2rzN5EZ01+DbKChbeykd8IPtODw==",
+  "dgSpecHash": "jox1V1f3Dok8/8AR1mS0GexXXFiHMeCPXTcyZ4FXNf5pYBID1EMgXoK2NpElgRvcZx3siwzSqJ+DSZO0YxOzCA==",
   "success": true,
   "projectFilePath": "C:\\Users\\bucel\\Desktop\\3 курс\\C#\\SEM6\\MVVMDemo\\MVVMDemo\\MVVMDemo.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\bucel\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.31\\microsoft.xaml.behaviors.wpf.1.1.31.nupkg.sha512",
+    "C:\\Users\\bucel\\.nuget\\packages\\prism.core\\8.1.97\\prism.core.8.1.97.nupkg.sha512",
+    "C:\\Users\\bucel\\.nuget\\packages\\prism.wpf\\8.1.97\\prism.wpf.8.1.97.nupkg.sha512",
     "C:\\Users\\bucel\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.23\\microsoft.netcore.app.host.win-x64.3.1.23.nupkg.sha512"
   ],
   "logs": []
