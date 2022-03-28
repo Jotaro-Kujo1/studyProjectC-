@@ -9,16 +9,8 @@ namespace MVVMDemo.Convertors
     {
         public override object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            if (value is byte)
-            {
-                byte res = (byte) value;
-                return res; 
-            }
-            else
-            {
-                return value;
-            }
-            
+            byte ival = (byte) value;
+            return ival;
         }
     }
 }

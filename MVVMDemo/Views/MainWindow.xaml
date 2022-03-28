@@ -3,15 +3,19 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MVVMDemo"
         xmlns:viewModels="clr-namespace:MVVMDemo.ViewModels"
+        xmlns:views="clr-namespace:MVVMDemo.Views"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    
     <Window.DataContext>
         <viewModels:MathViewModel/>
     </Window.DataContext>
-        <DockPanel>
+    <DockPanel Width="400" HorizontalAlignment="Right">
+        <views:EllipseView/>
             <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
-                <TextBox x:Name="TheNumber" Width="50" Margin="5"/>
+            <TextBox x:Name="TheNumber" Width="50" Margin="5" />
                 <Button Content="Add" Margin="5" Command="{Binding AddCommand}"
                         CommandParameter="{Binding ElementName=TheNumber, Path=Text}"/>
             </StackPanel>
@@ -24,5 +28,10 @@
                     CommandParameter="{Binding ElementName=TheListBox, Path=SelectedIndex}"/>
             <!-- Коллекция -->
             <ListBox  x:Name="TheListBox" ItemsSource="{Binding MyValues}"/>
+            
+            
         </DockPanel>
+    
+    
+    
 </Window>

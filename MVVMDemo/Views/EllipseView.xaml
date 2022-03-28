@@ -4,40 +4,30 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:MVVMDemo.Views"
+             xmlns:viewModels="clr-namespace:MVVMDemo.ViewModels"
              mc:Ignorable="d"
-             d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
+             d:DesignHeight="300" d:DesignWidth="300" d:DataContext="{d:DesignInstance Type=viewModels:EllipseViewModel}">
         
-        <TextBox Height = "25"
-                 HorizontalAlignment="Left"
-                 Margin = "80,190,0,0" Name="aBox"
-                 VerticalAlignment="Top" Width="100" />
-        <TextBox Height = "25"
-                 HorizontalAlignment="Left"
-                 Margin = "190,190,0,0" Name="rBox"
-                 VerticalAlignment="Top" Width="100" />
-        <TextBox Height = "25"
-                 HorizontalAlignment="Left"
-                 Margin = "80,220,0,0" Name="gBox"
-                 VerticalAlignment="Top" Width="100" />
-        <TextBox Height = "25"
-                 HorizontalAlignment="Left"
-                 Margin = "190,220,0,0" Name="bBox"
-                 VerticalAlignment="Top" Width="100" />
-        <Canvas>
-            <Ellipse Fill="LightBlue" 
-                     Width="150" 
-                     Height="150" 
-                     Visibility="Hidden" 
-                     Margin="110,5,55,0"
-                     Name="ellipse"/>
-        </Canvas>
-        <Button Content="Set text"
-                Height="30"
-                Width="100"
-                HorizontalAlignment="Left"
-                Margin="135,270,55,0" Name = "button"
-                VerticalAlignment="Top" 
-                Background="{StaticResource buttonBrush}" Command="{Binding Models.EllipseModel}"/>
-    </Grid>
+        <DockPanel Width="250" HorizontalAlignment="Left">
+                
+                <TextBox x:Name="TheNumberA" Width="50" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5"/>
+            <TextBox x:Name="TheNumberR" Width="50" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5"/>
+            <TextBox x:Name="TheNumberG" Width="50" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5"/>
+            <TextBox x:Name="TheNumberB" Width="50" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5"/>
+            <Button Content="Add A" Margin="-235,-150,15,15"   Width="50" Height="25" HorizontalAlignment="Left" VerticalAlignment="Center" Command="{Binding AddCommand}"
+                    CommandParameter="{Binding ElementName=TheNumberA, Converter={StaticResource ValueToColor}, Path=Text}"/>
+            <Button Content="Add R" Margin="-175,-150,15,15"   Width="50" Height="25" HorizontalAlignment="Left" VerticalAlignment="Center" Command="{Binding AddCommand}"
+                    CommandParameter="{Binding ElementName=TheNumberR, Converter={StaticResource ValueToColor}, Path=Text}"/>
+            <Button Content="Add G" Margin="-115,-150,15,15"   Width="50" Height="25" HorizontalAlignment="Left" VerticalAlignment="Center" Command="{Binding AddCommand}"
+                    CommandParameter="{Binding ElementName=TheNumberG, Converter={StaticResource ValueToColor}, Path=Text}"/>
+            <Button Content="Add B" Margin="-55,-150,15,15"   Width="50" Height="25" HorizontalAlignment="Left" VerticalAlignment="Center" Command="{Binding AddCommand}"
+                    CommandParameter="{Binding ElementName=TheNumberB , Converter={StaticResource ValueToColor}, Path=Text}"/>
+            <Canvas>
+                    <Ellipse Fill="{Binding Color}" 
+                             Width="150" 
+                             Height="150" 
+                             Margin="-170,100,55,0"
+                             Name="ellipse"/>
+            </Canvas>
+        </DockPanel>
 </UserControl>

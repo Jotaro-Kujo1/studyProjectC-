@@ -1,20 +1,31 @@
 ﻿using System.ComponentModel;
-using System.Drawing;
+using System.Windows.Media;
 using MVVM;
+using MVVMDemo.Models;
+using Prism.Commands;
+using System.Windows.Input;
 
 namespace MVVMDemo.ViewModels
 {
     public class EllipseViewModel : BindableBase
     {
-        private Color _color;
-        
+        private readonly EllipseModel _ell = new EllipseModel();
 
-        public Color Color
+
+        public EllipseViewModel()
         {
-            get { return _color; }
-            set => SetProperty(ref _color, value);
+            _ell.PropertyChanged += (s, e) =>
+            {
+                RaisePropertyChanged(e.PropertyName);
+            };
+            AddCommand = new DelegateCommand<string>(ival => {
+                byte tmp;
+                if (byte.TryParse(ival, out tmp)) _ell.AddValue(tmp);
+            });
+            
         }
 
-        public event PropertyChangedEventHandler ProrertyChanged;
+        public ICommand AddCommand { get; }
+        public Color Color => _ell.color;
     }
 }
