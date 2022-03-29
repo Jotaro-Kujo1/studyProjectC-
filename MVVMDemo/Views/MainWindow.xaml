@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MVVMDemo"
         xmlns:viewModels="clr-namespace:MVVMDemo.ViewModels"
+        xmlns:cr="clr-namespace:MVVMDemo.Convertors"
         xmlns:views="clr-namespace:MVVMDemo.Views"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
@@ -12,12 +13,15 @@
     <Window.DataContext>
         <viewModels:MathViewModel/>
     </Window.DataContext>
-    <DockPanel Width="400" HorizontalAlignment="Right">
-        <views:EllipseView/>
-            <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+    
+    <DockPanel Width="500" Height="450" HorizontalAlignment="Right">
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
             <TextBox x:Name="TheNumber" Width="50" Margin="5" />
                 <Button Content="Add" Margin="5" Command="{Binding AddCommand}"
                         CommandParameter="{Binding ElementName=TheNumber, Path=Text}"/>
+            <TextBox x:Name="TheString" Width="50" Margin="5" />
+                <Button Content="AddStr" Margin="5" Command="{Binding AddCommand}"
+                        CommandParameter="{Binding ElementName=TheString, Path=Text, Converter={cr:StringToInt}}"/>
             </StackPanel>
             <!-- Сумма -->
             <TextBox DockPanel.Dock="Bottom" Text="{Binding Sum, Mode=OneWay}" Margin="5"/>
