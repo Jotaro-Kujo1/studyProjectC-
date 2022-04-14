@@ -8,7 +8,7 @@
         xmlns:cr="clr-namespace:MVVMDemo.Convertors"
         xmlns:views="clr-namespace:MVVMDemo.Views"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="550" Width="800">
     
     
     <Window.DataContext>
@@ -24,15 +24,25 @@
                 <Button Content="AddStr" Margin="5" Command="{Binding AddCommand}"
                         CommandParameter="{Binding ElementName=TheString, Path=Text, Converter={cr:StringToInt}}"  Background="{StaticResource buttonBrush}"/>
             </StackPanel>
-            <!-- Сумма -->
+            
             <TextBox DockPanel.Dock="Bottom" Text="{Binding Sum, Mode=OneWay}" Margin="5"/>
-            <!-- Кнопка удаления из коллекции -->
+            
             <Button DockPanel.Dock="Right" VerticalAlignment="Top" Content="Remove"
                     Width="130" Margin="5"
                     Command="{Binding RemoveCommand}"
                     CommandParameter="{Binding ElementName=TheListBox, Path=SelectedIndex}"
                     Background="{StaticResource buttonBrush}"/>
-            <!-- Коллекция -->
+            <Button DockPanel.Dock="Right" VerticalAlignment="Top" Content="Read"
+                    Width="130" Margin="5,40,-135,5"
+                    Command="{Binding RemoveCommand}"
+                    CommandParameter="{Binding ElementName=TheListBox, Path=SelectedIndex}"
+                    Background="{StaticResource buttonBrush}"/>
+            <Button DockPanel.Dock="Right" VerticalAlignment="Top" Content="Save"
+                    Width="130" Margin="5,75,-135,5"
+                    Command="{Binding RemoveCommand}"
+                    CommandParameter="{Binding ElementName=TheListBox, Path=SelectedIndex}"
+                    Background="{StaticResource buttonBrush}"/>
+            
             <ListBox  x:Name="TheListBox" ItemsSource="{Binding MyValues}"/>
             
             
