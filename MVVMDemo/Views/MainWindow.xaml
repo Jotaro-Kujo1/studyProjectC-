@@ -34,13 +34,11 @@
                     Background="{StaticResource buttonBrush}"/>
             <Button DockPanel.Dock="Right" VerticalAlignment="Top" Content="Read"
                     Width="130" Margin="5,40,-135,5"
-                    Command="{Binding RemoveCommand}"
-                    CommandParameter="{Binding ElementName=TheListBox, Path=SelectedIndex}"
+                    Command="{Binding LoadCommand}"
                     Background="{StaticResource buttonBrush}"/>
             <Button DockPanel.Dock="Right" VerticalAlignment="Top" Content="Save"
                     Width="130" Margin="5,75,-135,5"
-                    Command="{Binding RemoveCommand}"
-                    CommandParameter="{Binding ElementName=TheListBox, Path=SelectedIndex}"
+                    Command="{Binding SaveCommand}"
                     Background="{StaticResource buttonBrush}"/>
             
             <ListBox  x:Name="TheListBox" ItemsSource="{Binding MyValues}"/>

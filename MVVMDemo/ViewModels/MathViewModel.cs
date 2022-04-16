@@ -25,12 +25,17 @@ namespace MVVMDemo.ViewModels
             RemoveCommand = new DelegateCommand<int?>(i => {
                 if(i.HasValue) _model.RemoveValue(i.Value);
             });
+            SaveCommand = new RelayCommand(_model.Save);
+            LoadCommand = new RelayCommand(_model.Load);
         }
 
+        
 
         //public ICommand AddCommand { get; }
         public DelegateCommand<string> AddCommand { get; }
         public DelegateCommand<int?> RemoveCommand { get; }
+        public ICommand SaveCommand { get; }
+        public ICommand LoadCommand { get; }
         public int Sum => _model.Sum;
         public ReadOnlyObservableCollection<int> MyValues => _model.MyPublicValues;
     }
