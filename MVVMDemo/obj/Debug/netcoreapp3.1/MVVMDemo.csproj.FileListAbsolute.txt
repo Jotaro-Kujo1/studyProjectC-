@@ -27,3 +27,5 @@ C:\Users\bucel\Desktop\3 курс\C#\SEM6\MVVMDemo\MVVMDemo\bin\Debug\netcoreapp
 C:\Users\bucel\Desktop\3 курс\C#\SEM6\MVVMDemo\MVVMDemo\bin\Debug\netcoreapp3.1\Prism.dll
 C:\Users\bucel\Desktop\3 курс\C#\SEM6\MVVMDemo\MVVMDemo\bin\Debug\netcoreapp3.1\Prism.Wpf.dll
 C:\Users\bucel\Desktop\3 курс\C#\SEM6\MVVMDemo\MVVMDemo\obj\Debug\netcoreapp3.1\Views\MainWindow.baml
+C:\Users\bucel\Desktop\3 курс\C#\SEM6\MVVMDemo\MVVMDemo\bin\Debug\netcoreapp3.1\Microsoft.Expression.Interactions.dll
+C:\Users\bucel\Desktop\3 курс\C#\SEM6\MVVMDemo\MVVMDemo\bin\Debug\netcoreapp3.1\System.Windows.Interactivity.dll
